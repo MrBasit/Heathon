@@ -1,7 +1,15 @@
+// main menu
+//const menuTrigger = document.querySelector('.hamburger__btn');
+const menuList = document.querySelector('.navbar');
+
+menuTrigger.addEventListener('click',()=>{
+    menuList.classList.toggle('active');
+});
+
+
 // // Logo Width
 try {
     document.addEventListener("scroll", () => {
-        console.log(scrollY)
         if (scrollY > 54) {
             document.querySelector(".header-logo").classList.add("active");
 
@@ -14,6 +22,7 @@ try {
 } catch (err) {
     console.log(err);
 }
+
 // Menu links
 try {
     var listItem = document.querySelectorAll('.list__item__links');
@@ -33,7 +42,6 @@ try {
 try {
     var backToTopButton = document.querySelector('.scroll__top__top');
     document.addEventListener("scroll", () => {
-        console.log(scrollY)
         if (scrollY > 100) {
             backToTopButton.classList.add("active");
         }
@@ -53,4 +61,41 @@ try {
 } catch (err) {
     console.log(err);
 }
+// Home By Default Header
+try {
+    
+    var faqLink = document.querySelectorAll('.faq__item__link');
+    var faqLinkContent = document.querySelectorAll('.faq__faq__item');
+    faqLink.forEach(item => { item.addEventListener('click', FaqListFunc) });
+    function deacFaqContent() {
+        faqLinkContent.forEach(item => { item.classList.remove('show') })
+    }
 
+    function FaqListFunc(e) {
+        console.log(e.target);
+        
+        if (e.target.parentElement.classList.contains('show') || e.target.parentElement.parentElement.classList.contains('show')) {
+            deacFaqContent();
+        }else{
+            deacFaqContent();
+            this.parentElement.classList.add('show');
+        }    
+    }
+
+} catch (err) {
+    console.log(err);
+}
+// Popup Card
+try {
+    
+    var popupCardTrigger = document.querySelectorAll('.purchase');
+    var popupCardMain = document.querySelector('.popup__card__main');
+    // popupCardTrigger.addEventListener('click', popupCardFunc);
+    popupCardTrigger.forEach(item => { item.addEventListener('click', popupCardFunc) });
+    function popupCardFunc() {
+        popupCardMain.classList.toggle('active');
+    }
+
+} catch (err) {
+    console.log(err);
+}
