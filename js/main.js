@@ -1,5 +1,5 @@
 // main menu
-//const menuTrigger = document.querySelector('.hamburger__btn');
+const menuTrigger = document.querySelector('.hamburger__btn');
 const menuList = document.querySelector('.navbar');
 
 menuTrigger.addEventListener('click',()=>{
@@ -88,9 +88,8 @@ try {
 // Popup Card
 try {
     
-    var popupCardTrigger = document.querySelectorAll('.purchase');
+    var popupCardTrigger = document.querySelectorAll('.available');
     var popupCardMain = document.querySelector('.popup__card__main');
-    // popupCardTrigger.addEventListener('click', popupCardFunc);
     popupCardTrigger.forEach(item => { item.addEventListener('click', popupCardFunc) });
     function popupCardFunc() {
         popupCardMain.classList.toggle('active');
@@ -98,4 +97,14 @@ try {
 
 } catch (err) {
     console.log(err);
+}
+
+// prevent default
+document.querySelector('body').addEventListener('click', preventDflt);
+function preventDflt(e){
+  var tElment = e.target.getAttribute('href');
+  var tElmentP = e.target.parentElement.getAttribute('href');
+  if(tElment == '#' || tElmentP == '#'){
+    e.preventDefault();
+  }
 }
