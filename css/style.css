@@ -122,7 +122,7 @@ p{
   background: #f88700;
   border-radius: 0.3rem;
   padding: .4em 1.4rem;
-  cursor: not-allowed;
+  
 }
 .hamburger__btn{
   display: none;
@@ -241,7 +241,7 @@ p{
 .search-input a{
   margin-left: -2rem;
   color: #727272;
-  cursor: not-allowed;
+  
 }
 
 /* ---------------------------------------------------------- */
@@ -283,7 +283,7 @@ p{
   padding: 0.5rem 2.5rem;
   border: 1px rgb(193, 193, 193) solid;
   border-radius: 1.5rem;
-  cursor: not-allowed;
+  
 }
 .type-pdf a:hover{
   background: black;
@@ -373,7 +373,7 @@ p{
 }
 .unavailable{
   color: #727272;
-  cursor: not-allowed;
+  
 }
 .available,
 .unavailable{
@@ -409,7 +409,7 @@ p{
   font-weight: 900;
   border: 1px rgb(193, 193, 193) solid;
   border-radius: 0.5rem;
-  cursor: not-allowed;
+  
 }
 
 /* Faq -------------------------------------------------- */
@@ -440,7 +440,7 @@ p{
   font-weight: bolder;
   padding: 0.6rem 2.5rem;
   color: #151515;
-  cursor: not-allowed;
+  
 }
 .main__faq__bg{
   background-image: url('../img/map.png');
@@ -534,7 +534,7 @@ p{
   align-items: center;
 }
 .footer-term a{
-  cursor: not-allowed;
+  
 }
 .footer-logo img{
   width:10rem;
@@ -549,7 +549,7 @@ p{
   padding: 0.1rem 0;
 }
 .footer-policy a{
-  cursor: not-allowed;
+  
 
 }
 .current{
@@ -588,8 +588,9 @@ p{
 }
 .fas.fa-times.available{
   position: fixed;
-  top: 5%;
-  left: 90%;
+  right: 10%;
+  top: 3%;
+  font-size: 18px;
 }
 /* Scroll To Top Btn -------------------------------------------------- */
 .scroll__top__top{
@@ -650,7 +651,7 @@ p{
   text-decoration: underline;
 }
 .purchase-card p:first-child a{
-  cursor: not-allowed;
+  
 }
 .purchase-range{
   margin-top:0.5rem;
@@ -678,7 +679,7 @@ p{
   background: #f88700;
   color: white;
   font-weight: 500;
-  cursor: not-allowed;
+  
   
 }
 .amount h4{
@@ -696,6 +697,11 @@ p{
   background: #f88700;
   padding: 0.3rem 0;
   border-radius: 0.5rem;
-  cursor: not-allowed;
+  
 }
 /* ------------------------------------------------------- */
+
+.position-fixed{
+  position: fixed;
+
+}
